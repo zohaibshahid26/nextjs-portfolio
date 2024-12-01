@@ -7,7 +7,7 @@ export default function Header() {
       <nav className='container flex max-w-3xl items-center justify-between'>
         <div>
           <Link href='/' className='font-serif text-2xl font-bold'>
-            James Perkins
+            Guneet kaur
           </Link>
         </div>
 
@@ -27,9 +27,6 @@ export default function Header() {
           </li>
           <li className='transition-colors hover:text-foreground'>
             <Link href='/about'>About</Link>
-          </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/resume'>Resume</Link>
           </li>
         </ul>
 

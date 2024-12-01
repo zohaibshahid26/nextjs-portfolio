@@ -1,46 +1,44 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
-import { ProjectMetadata } from '@/lib/projects'
-import { formatDate } from '@/lib/utils'
+const projects = [
+  {
+    name: 'Recipe Finder',
+    description: 'Find recipes based on ingredients you have.',
+    link: '/projects/recipe-finder'
+  },
+  {
+    name: 'Property Tax Rates',
+    description:
+      'Retrieve property tax rates for different locations in the US.',
+    link: '/projects/property-tax'
+  },
+  {
+    name: 'Company Logos',
+    description: 'Get logo images for different companies.',
+    link: '/projects/logo-api'
+  }
+]
 
-export default function Projects({
-  projects
-}: {
-  projects: ProjectMetadata[]
-}) {
+export default function Projects() {
   return (
-    <ul className='grid grid-cols-1 gap-8 sm:grid-cols-2'>
-      {projects.map(project => (
-        <li key={project.slug} className='group relative'>
-          <Link href={`/projects/${project.slug}`}>
-            {project.image && (
-              <div className='h-72 w-full overflow-hidden bg-muted sm:h-60'>
-                <Image
-                  src={project.image}
-                  alt={project.title || ''}
-                  fill
-                  className='rounded-lg object-cover object-center transition-transform duration-500 group-hover:scale-105'
-                />
-              </div>
-            )}
-
-            <div className='absolute inset-[1px] rounded-lg bg-background/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
-
-            <div className='absolute inset-x-0 bottom-0 translate-y-2 px-6 py-5 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100'>
-              <h2 className='title line-clamp-1 text-xl no-underline'>
-                {project.title}
-              </h2>
-              <p className='line-clamp-1 text-sm text-muted-foreground'>
-                {project.summary}
-              </p>
-              <p className='text-xs font-light text-muted-foreground'>
-                {formatDate(project.publishedAt ?? '')}
-              </p>
-            </div>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div className='mb-5 mt-5'>
+      <h2 className='text-2xl font-semibold'>Portfolio</h2>
+      <div className='mt-4 grid gap-6 md:grid-cols-2'>
+        {projects.map(project => (
+          <div key={project.name} className='rounded-lg border p-4 shadow-md'>
+            <h3 className='text-xl font-semibold'>{project.name}</h3>
+            <p className='mt-2 font-light text-muted-foreground'>
+              {project.description}
+            </p>
+            <Link
+              href={project.link}
+              className='mt-4 inline-block text-blue-500 underline'
+            >
+              View Project
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
