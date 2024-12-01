@@ -1,0 +1,75 @@
+---
+  title: Introduction to Tailwind CSS
+  summary: Tailwind CSS is a utility-first CSS framework that makes it easy to build custom designs. This post will introduce you to the basics of Tailwind CSS.
+  image: /images/posts/how-to-use-tailwind.jpg
+  author: 'Hamed Bahram'
+  publishedAt: '2024-08-12'
+---
+
+Tailwind CSS is a utility-first CSS framework that makes it easy to build custom
+designs. This post will introduce you to the basics of Tailwind CSS.
+
+## What is Tailwind CSS?
+
+Tailwind CSS is a utility-first CSS framework that provides low-level utility
+classes to build custom designs without writing custom CSS. It allows you to
+create responsive and modern designs quickly and efficiently.
+
+```jsx
+export default function Example() {
+  return <div className='bg-blue-500 p-4 text-white'>Hello, Tailwind CSS!</div>
+}
+```
+
+## Why use Tailwind CSS?
+
+Tailwind CSS is a great choice for building custom designs because it provides a
+number of features that make it easy to create responsive and modern designs.
+Some of the key features of Tailwind CSS include:
+
+- **Utility-First**: Tailwind CSS provides low-level utility classes that can be
+  composed to build custom designs.
+- **Responsive Design**: Tailwind CSS makes it easy to create responsive designs
+  with its built-in responsive utilities.
+- **Customization**: Tailwind CSS is highly customizable, allowing you to
+  configure the design system to match your project's needs.
+
+## How to use Tailwind CSS
+
+To use Tailwind CSS, you need to install the `tailwindcss` package and configure
+it in your project. Here is an example of how to set up Tailwind CSS in a
+Next.js project:
+
+```bash
+npm install tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Then, configure your `tailwind.config.js` to include your project's paths:
+
+```js
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+}
+```
+
+You can then start using Tailwind CSS classes in your components:
+
+```jsx
+export default function Example() {
+  return <div className='bg-blue-500 p-4 text-white'>Hello, Tailwind CSS!</div>
+}
+```
+
+## Conclusion
+
+Tailwind CSS is a powerful tool that makes it easy to build custom designs
+quickly and efficiently. This post has introduced you to the basics of Tailwind
+CSS and explained why you might want to use it in your projects.
