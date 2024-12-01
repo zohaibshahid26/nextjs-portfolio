@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import authorImage from '@/public/images/authors/hamed.png'
+import authorImage from '@/public/images/authors/man.webp'
+import Link from 'next/link'
 
 export default function Intro() {
   return (
@@ -9,6 +10,19 @@ export default function Intro() {
         <p className='mt-3 font-light text-muted-foreground'>
           I&#39;m a software engineer based in United States. I&#39;m passionate
           about learning new technologies and sharing knowledge with others.
+          <Link
+            href='/about'
+            className='mx-1 underline decoration-1 underline-offset-2 transition-colors hover:text-foreground'
+          >
+            <span>Learn more about me</span>
+          </Link>
+          or check out my latest resume
+          <Link
+            href='/resume'
+            className='mx-1 underline decoration-1 underline-offset-2 transition-colors hover:text-foreground'
+          >
+            <span>here</span>
+          </Link>
         </p>
       </div>
       <div className='relative'>
