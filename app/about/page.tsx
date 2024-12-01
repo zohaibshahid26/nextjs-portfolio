@@ -9,9 +9,9 @@ export default function About() {
         <div className='flex flex-col-reverse items-start gap-x-10 gap-y-4 md:flex-row md:items-center'>
           <div className='mt-2 flex-1 md:mt-0'>
             <p className='mt-3 font-light text-muted-foreground'>
-              I'm an international student currently studying abroad, navigating
-              a new culture and academic system. I focus on adapting to my
-              surroundings while balancing my studies and personal life. I
+              I &#39; m an international student currently studying abroad,
+              navigating a new culture and academic system. I focus on adapting
+              to my surroundings while balancing my studies and personal life. I
               engage with diverse perspectives and experiences, which enriches
               my education.
             </p>
